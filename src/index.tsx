@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import AppLayout from "./AppLayout";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+
+import "./index.css";
+import "@patternfly/patternfly/patternfly.css";
+import "@patternfly/patternfly/patternfly-addons.css";
+import { PageSection, Title } from "@patternfly/react-core";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <AppLayout>
+        {/* TODO: routes here! */}
+        <PageSection>
+          <Title headingLevel="h1" size="lg">
+            Example page! TODO render these from routes
+          </Title>
+        </PageSection>
+      </AppLayout>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -4,21 +4,22 @@ import AppLayout from './AppLayout';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
+import { worker } from './mocks/browser';
+
 import './index.css';
 import '@patternfly/patternfly/patternfly.css';
 import '@patternfly/patternfly/patternfly-addons.css';
-import { PageSection, Title } from '@patternfly/react-core';
+
+import { TempPage } from './TempPage';
+
+worker.start();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <AppLayout>
-        {/* TODO: routes here! */}
-        <PageSection>
-          <Title headingLevel="h1" size="lg">
-            Example page! TODO render these from routes
-          </Title>
-        </PageSection>
+        {/* TODO: replace this with routes! */}
+        <TempPage />
       </AppLayout>
     </BrowserRouter>
   </React.StrictMode>,

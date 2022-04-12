@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import {
   Button,
@@ -10,11 +10,9 @@ import {
   PageHeader,
   PageSidebar,
   SkipToContent,
-} from "@patternfly/react-core";
+} from '@patternfly/react-core';
 
-const AppLayout: React.FunctionComponent<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+const AppLayout: React.FunctionComponent<{ children: React.ReactNode }> = ({ children }) => {
   const navigate = useNavigate();
 
   const [isNavOpen, setIsNavOpen] = React.useState(true);
@@ -30,7 +28,7 @@ const AppLayout: React.FunctionComponent<{ children: React.ReactNode }> = ({
     setIsMobileView(props.mobileView);
   };
 
-  const pageId = "primary-app-container";
+  const pageId = 'primary-app-container';
 
   const header = (
     <PageHeader
@@ -39,7 +37,7 @@ const AppLayout: React.FunctionComponent<{ children: React.ReactNode }> = ({
           className="logo"
           variant="plain"
           onClick={() => {
-            navigate("/");
+            navigate('/');
           }}
         >
           Mock App!
@@ -83,7 +81,7 @@ const AppLayout: React.FunctionComponent<{ children: React.ReactNode }> = ({
               <NavLink
                 end={true}
                 to="/todo"
-                className={({ isActive }) => (isActive ? "pf-m-current" : "")}
+                className={({ isActive }) => (isActive ? 'pf-m-current' : '')}
               >
                 TODO
               </NavLink>
